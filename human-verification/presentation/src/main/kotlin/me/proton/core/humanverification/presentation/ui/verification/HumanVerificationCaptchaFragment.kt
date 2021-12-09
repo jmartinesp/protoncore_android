@@ -32,7 +32,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import me.proton.core.humanverification.domain.entity.TokenType
-import me.proton.core.humanverification.presentation.CaptchaApiHost
+import me.proton.core.humanverification.presentation.HumanVerificationApiHost
 import me.proton.core.humanverification.presentation.R
 import me.proton.core.humanverification.presentation.databinding.FragmentHumanVerificationCaptchaBinding
 import me.proton.core.humanverification.presentation.ui.HumanVerificationDialogFragment
@@ -53,7 +53,7 @@ import javax.inject.Inject
 internal class HumanVerificationCaptchaFragment : ProtonFragment(R.layout.fragment_human_verification_captcha) {
 
     @Inject
-    @CaptchaApiHost
+    @HumanVerificationApiHost
     lateinit var captchaApiHost: String
 
     @Inject

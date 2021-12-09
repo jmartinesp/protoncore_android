@@ -31,7 +31,7 @@ import me.proton.core.network.domain.session.SessionId
 @Dao
 abstract class SessionDao : BaseDao<SessionEntity>() {
 
-    @Query("SELECT * FROM SessionEntity WHERE product = :product")
+    @Query("SELECT * FROM SessionEntity where product = :product")
     abstract fun findAll(product: Product): Flow<List<SessionEntity>>
 
     @Query("SELECT * FROM SessionEntity WHERE sessionId = :sessionId")
